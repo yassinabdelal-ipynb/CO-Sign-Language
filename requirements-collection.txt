@@ -1,0 +1,7 @@
+-r requirements.txt
+# Legacy API explicitly used by the shared locator; not latest MediaPipe Tasks.
+mediapipe==0.10.21
+opencv-contrib-python==4.11.0.86
+dlib==20.0.1
+# Optional trained eye-state model adapter. Review AGPL-3.0 terms before reuse.
+ultralytics==8.4.178

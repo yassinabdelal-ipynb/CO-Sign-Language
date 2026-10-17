@@ -1,0 +1,63 @@
+{
+  "source": "Supplied training output confusion_matrix.npy, not rerun in publication",
+  "classes": [
+    "center",
+    "close",
+    "down",
+    "left",
+    "right",
+    "up"
+  ],
+  "counts": [
+    [
+      1399,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1396,
+      1,
+      0,
+      0,
+      3
+    ],
+    [
+      0,
+      7,
+      1393,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      5,
+      1395,
+      0,
+      0
+    ],
+    [
+      7,
+      0,
+      0,
+      45,
+      1345,
+      3
+    ],
+    [
+      1,
+      5,
+      0,
+      1,
+      2,
+      1391
+    ]
+  ],
+  "samples": 8400,
+  "accuracy": 0.9903571428571428
+}

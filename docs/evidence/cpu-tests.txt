@@ -1,0 +1,21 @@
+test_all_commands_replay (test_core.CoreTests.test_all_commands_replay) ... ok
+test_checkpoint_missing_and_mismatch (test_core.CoreTests.test_checkpoint_missing_and_mismatch) ... ok
+test_collection_keyboard_cancel_records_and_closes (test_core.CoreTests.test_collection_keyboard_cancel_records_and_closes) ... ok
+test_gate_blink_exception (test_core.CoreTests.test_gate_blink_exception) ... ok
+test_hold_not_repeated (test_core.CoreTests.test_hold_not_repeated) ... ok
+test_invalid_mapping (test_core.CoreTests.test_invalid_mapping) ... ok
+test_invalid_timing (test_core.CoreTests.test_invalid_timing) ... ok
+test_low_confidence_does_not_rearm (test_core.CoreTests.test_low_confidence_does_not_rearm) ... ok
+test_missing_yolo_fails_without_download (test_core.CoreTests.test_missing_yolo_fails_without_download) ... ok
+test_noise_is_seeded (test_core.CoreTests.test_noise_is_seeded) ... ok
+test_patch_order_and_model_shape (test_core.CoreTests.test_patch_order_and_model_shape) ... ok
+test_replay_error_has_line (test_core.CoreTests.test_replay_error_has_line) ... ok
+test_roi_bgr_conversion_and_bounds (test_core.CoreTests.test_roi_bgr_conversion_and_bounds) ... ok
+test_three_four_and_prefix_free (test_core.CoreTests.test_three_four_and_prefix_free) ... ok
+test_timeout_and_stall (test_core.CoreTests.test_timeout_and_stall) ... ok
+test_validation_pixels_exact (test_core.CoreTests.test_validation_pixels_exact) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.256s
+
+OK

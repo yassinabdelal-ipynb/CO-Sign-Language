@@ -1,0 +1,5 @@
+-r requirements.txt
+tensorflow==2.19.0
+matplotlib==3.10.8
+tqdm==4.67.1
+ipykernel==6.30.1

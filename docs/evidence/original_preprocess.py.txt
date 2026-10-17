@@ -1,0 +1,71 @@
+import cv2
+import mediapipe as mp
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Initialize MediaPipe Face Mesh
+mp_face_mesh = mp.solutions.face_mesh
+face_mesh = mp_face_mesh.FaceMesh(static_image_mode=True, max_num_faces=1, refine_landmarks=True)
+
+# Load the image
+image_path = 'WIN_20241122_13_44_09_Pro.jpg'
+image = cv2.imread(image_path)
+
+# Convert to RGB (MediaPipe uses RGB images)
+image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+# Perform face mesh detection
+result = face_mesh.process(image_rgb)
+
+# Check if landmarks were detected
+if result.multi_face_landmarks:
+    for face_landmarks in result.multi_face_landmarks:
+        # Extract eye region landmarks (right and left eye)
+        right_eye_landmarks = [face_landmarks.landmark[i] for i in range(33, 42)]  # Right eye landmarks
+        left_eye_landmarks = [face_landmarks.landmark[i] for i in range(362, 371)] # Left eye landmarks
+
+        # Convert normalized landmark points to pixel coordinates
+        h, w, _ = image.shape
+        right_eye_coords = [(int(lm.x * w), int(lm.y * h)) for lm in right_eye_landmarks]
+        left_eye_coords = [(int(lm.x * w), int(lm.y * h)) for lm in left_eye_landmarks]
+
+        # Create masks for both eyes
+        def get_eye_mask(eye_coords):
+            mask = np.zeros((h, w), dtype=np.uint8)
+            points = np.array(eye_coords, dtype=np.int32)
+            cv2.fillPoly(mask, [points], 255)
+            return mask
+
+        # Get masks for both eyes
+        right_eye_mask = get_eye_mask(right_eye_coords)
+        left_eye_mask = get_eye_mask(left_eye_coords)
+
+        # Extract eye regions using the masks
+        right_eye = cv2.bitwise_and(image, image, mask=right_eye_mask)
+        left_eye = cv2.bitwise_and(image, image, mask=left_eye_mask)
+
+        # Convert extracted eyes to grayscale
+        right_eye_gray = cv2.cvtColor(right_eye, cv2.COLOR_BGR2GRAY)
+        left_eye_gray = cv2.cvtColor(left_eye, cv2.COLOR_BGR2GRAY)
+
+        # Resize the grayscale eye images
+        right_eye_resized = cv2.resize(right_eye_gray, (100, 50))  # Resize to 100x50
+        left_eye_resized = cv2.resize(left_eye_gray, (100, 50))    # Resize to 100x50
+
+        # Display the right and left eye
+        plt.subplot(1, 2, 1)
+        plt.imshow(right_eye_resized, cmap='gray')
+        plt.title('Right Eye')
+
+        plt.subplot(1, 2, 2)
+        plt.imshow(left_eye_resized, cmap='gray')
+        plt.title('Left Eye')
+
+        plt.show()
+
+        # Save the grayscale eye images (optional)
+        cv2.imwrite('right_eye_grayscale.png', right_eye_resized)
+        cv2.imwrite('left_eye_grayscale.png', left_eye_resized)
+
+else:
+    print("No face landmarks detected.")

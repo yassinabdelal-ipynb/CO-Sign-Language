@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-17T06:37:25.565548+00:00",
+  "source_sha256": {
+    "realtime_detection.py": "221d085813d42a6c82c5ec967dc06219a808161d7a1ac36e6e8e00789322b180",
+    "isef_preprocess.py": "250eb0ba9da480a0e0496e649c48a02f5206be378cb321143c5bb10092551f5e",
+    "scripts/verify_checkpoint.py": "5c05ea5f1140772a64ca0d96410d67b72a0f27d97068d683531566729e0be85a"
+  },
+  "input": "procedurally generated uint8 grayscale noise; not evaluation data",
+  "seed": 2025,
+  "checkpoint_sha256": "330c19c2711a5c711624c183b968cae0923427395ffe8d24bd494b4525b278a7",
+  "classes": [
+    "center",
+    "close",
+    "down",
+    "left",
+    "right",
+    "up"
+  ],
+  "parameters": 1879878,
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "vram_bytes": 8546484224,
+  "os": "Windows-11-10.0.26200-SP0",
+  "python": "3.14.7",
+  "versions": {
+    "torch": "2.14.1+cu130",
+    "numpy": "2.4.6",
+    "Pillow": "13.0.0"
+  },
+  "cuda_runtime": "13.0",
+  "warmup": 2,
+  "warmup_scope": "both model-only and full preprocessing/inference requests",
+  "repetitions": 10,
+  "setup_ms": 160.11100000469014,
+  "request_ms": [
+    8.231199986767024,
+    8.39909998467192,
+    7.571900001494214,
+    7.594900002004579,
+    7.619499985594302,
+    7.609199994476512,
+    7.434600003762171,
+    7.425000017974526,
+    7.946099998662248,
+    8.125799999106675
+  ],
+  "device_ms": [
+    7.09830379486084,
+    9.925536155700684,
+    7.204351902008057,
+    7.143295764923096,
+    7.18617582321167,
+    7.206783771514893,
+    7.0966081619262695,
+    7.107456207275391,
+    7.197343826293945,
+    7.219488143920898
+  ],
+  "request_median_ms": 7.614349990035407,
+  "request_min_ms": 7.425000017974526,
+  "request_max_ms": 8.39909998467192,
+  "request_stdev_ms": 0.351091219486576,
+  "numerical": {
+    "finite": true,
+    "output_shape": [
+      6
+    ],
+    "max_absolute_probability_difference": 1.7881393432617188e-07,
+    "atol": 0.0001,
+    "rtol": 0.001,
+    "cpu_cuda_allclose": true
+  },
+  "failed_samples": 0,
+  "peak_allocated_gpu_bytes": 50671616,
+  "caveats": "Laptop clocks, power and other activity uncontrolled. Model-only CUDA events and request preprocessing/transfer/output time measured separately. No camera, face detector or eye-state gate measured. No accuracy inferred.",
+  "driver": "610.60"
+}

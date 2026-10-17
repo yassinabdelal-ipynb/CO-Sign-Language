@@ -1,0 +1,3 @@
+# Core inference, decoder, numerical tests. Python 3.10-3.12 for collection extras.
+numpy==1.26.4
+Pillow==12.1.1

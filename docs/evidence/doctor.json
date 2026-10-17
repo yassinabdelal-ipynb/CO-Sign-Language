@@ -1,0 +1,32 @@
+{
+  "os": "Windows-11-10.0.26200-SP0",
+  "python": "3.14.7",
+  "packages": {
+    "torch": "2.14.1+cu130",
+    "numpy": "2.4.6",
+    "Pillow": "13.0.0",
+    "mediapipe": null,
+    "dlib": null,
+    "opencv-contrib-python": null,
+    "ultralytics": null,
+    "tensorflow": null
+  },
+  "tools": {
+    "git": true,
+    "cl": false,
+    "cmake": false,
+    "nvcc": false,
+    "nvidia-smi": true
+  },
+  "cuda": {
+    "available": true,
+    "runtime": "13.0",
+    "devices": [
+      {
+        "name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "vram_bytes": 8546484224
+      }
+    ]
+  },
+  "driver_query": "NVIDIA GeForce RTX 5060 Laptop GPU, 8151 MiB, 610.60"
+}

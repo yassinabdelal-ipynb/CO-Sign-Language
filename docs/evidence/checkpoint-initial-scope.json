@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "input": "procedurally generated uint8 grayscale noise; not evaluation data",
+  "seed": 2025,
+  "checkpoint_sha256": "330c19c2711a5c711624c183b968cae0923427395ffe8d24bd494b4525b278a7",
+  "classes": [
+    "center",
+    "close",
+    "down",
+    "left",
+    "right",
+    "up"
+  ],
+  "parameters": 1879878,
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "vram_bytes": 8546484224,
+  "os": "Windows-11-10.0.26200-SP0",
+  "python": "3.14.7",
+  "versions": {
+    "torch": "2.14.1+cu130",
+    "numpy": "2.4.6",
+    "Pillow": "13.0.0"
+  },
+  "cuda_runtime": "13.0",
+  "warmup": 2,
+  "repetitions": 10,
+  "setup_ms": 221.80989998742007,
+  "request_ms": [
+    59.57040001521818,
+    11.4142999809701,
+    10.163500002818182,
+    8.046699978876859,
+    9.453000006033108,
+    8.797599992249161,
+    9.387700003571808,
+    9.894399991026148,
+    7.769000018015504,
+    7.9889000044204295
+  ],
+  "device_ms": [
+    7.393248081207275,
+    11.140768051147461,
+    7.980000019073486,
+    7.471744060516357,
+    7.6760640144348145,
+    7.60700798034668,
+    8.198304176330566,
+    9.174783706665039,
+    16.2030086517334,
+    8.348671913146973
+  ],
+  "request_median_ms": 9.420350004802458,
+  "request_min_ms": 7.769000018015504,
+  "request_max_ms": 59.57040001521818,
+  "request_stdev_ms": 15.964258920380502,
+  "numerical": {
+    "finite": true,
+    "output_shape": [
+      6
+    ],
+    "max_absolute_probability_difference": 1.7881393432617188e-07,
+    "atol": 0.0001,
+    "rtol": 0.001,
+    "cpu_cuda_allclose": true
+  },
+  "failed_samples": 0,
+  "peak_allocated_gpu_bytes": 50671616,
+  "caveats": "Laptop clocks, power and other activity uncontrolled. Model-only CUDA events and request preprocessing/transfer/output time measured separately. No camera, face detector or eye-state gate measured. No accuracy inferred.",
+  "driver": "610.60"
+}
