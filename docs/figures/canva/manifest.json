@@ -1,0 +1,151 @@
+{
+  "source": "Author-provided Canva design DAGYFEQyxuM",
+  "source_link": "https://canva.link/p8hqicedmjv0bf8",
+  "provenance": "Original image assets downloaded from the rendered shared design. No raw graph data reconstructed. Signed media URLs excluded.",
+  "preview_method": "Matplotlib displays the original pixels over white; no numerical data are changed.",
+  "figures": [
+    {
+      "name": "training-curves",
+      "title": "Historical model loss and accuracy",
+      "caption": "Figures 18\u201319. Combined source image; raw epoch samples were not supplied.",
+      "source_asset_id": "0e670c488084703f",
+      "original": "originals/training-curves.png",
+      "preview": "training-curves.png",
+      "source_dimensions": [
+        1280,
+        542
+      ],
+      "original_sha256": "cbf70d3c559660bd70fb7382a00932ecf08d5a87057891a9571eacd72e15b337"
+    },
+    {
+      "name": "vit-confusion",
+      "title": "Historical ViT confusion matrix",
+      "caption": "Figure 23. Class order is retained from the image, not inferred from the current checkpoint.",
+      "source_asset_id": "4831936184ae2e3f",
+      "original": "originals/vit-confusion.jpg",
+      "preview": "vit-confusion.png",
+      "source_dimensions": [
+        634,
+        489
+      ],
+      "original_sha256": "720e7750b8a9b8206ae34d10c0da938cbb98edd35ced9e5f305c65da8232e136"
+    },
+    {
+      "name": "cnn-confusion",
+      "title": "Historical CNN confusion matrix",
+      "caption": "Figure 24. Comparator code, weights and evaluation protocol were not supplied.",
+      "source_asset_id": "d8f41758f289a034",
+      "original": "originals/cnn-confusion.png",
+      "preview": "cnn-confusion.png",
+      "source_dimensions": [
+        848,
+        716
+      ],
+      "original_sha256": "b32ae34190b8a62d091d1b118edb7e59902e12d030c0d16e31d16988d443c1ec"
+    },
+    {
+      "name": "text-entry",
+      "title": "Text entry and comfort",
+      "caption": "Figure 20. Before/after chart annotates 16 WPM and 8/10 comfort after; its protocol is not supplied.",
+      "source_asset_id": "def2b523b6ffa1af",
+      "original": "originals/text-entry.png",
+      "preview": "text-entry.png",
+      "source_dimensions": [
+        780,
+        584
+      ],
+      "original_sha256": "6413744eda354e5c64d49d8cf05a8b55f11c632aa8a578caf364b51d4198b92d"
+    },
+    {
+      "name": "class-radar",
+      "title": "Per-class radar chart",
+      "caption": "Figure 22. Metric scales and values are retained as drawn; they are not recalculated.",
+      "source_asset_id": "e2c447d9ecd1eacf",
+      "original": "originals/class-radar.png",
+      "preview": "class-radar.png",
+      "source_dimensions": [
+        800,
+        636
+      ],
+      "original_sha256": "dfddbaf729d210f0fa98be434cdc040a49b0d2659e56b0552248d73f5c203e67"
+    },
+    {
+      "name": "attention-map",
+      "title": "Attention heatmap",
+      "caption": "Figure 26. Source inputs, layer selection and extraction code are not available.",
+      "source_asset_id": "7b0dc318266812c7",
+      "original": "originals/attention-map.png",
+      "preview": "attention-map.png",
+      "source_dimensions": [
+        628,
+        520
+      ],
+      "original_sha256": "537eb89a55ef356557ae1d0948c86310782e784672843aba048911a3aefc8ce1"
+    },
+    {
+      "name": "nis-over-time",
+      "title": "NIS score over time",
+      "caption": "Figure 21. Original threshold and trace retained; raw timestamps/samples are not supplied.",
+      "source_asset_id": "0492a63e22fcaa8e",
+      "original": "originals/nis-over-time.png",
+      "preview": "nis-over-time.png",
+      "source_dimensions": [
+        1280,
+        677
+      ],
+      "original_sha256": "204dd04d64100df0466f554d366df791572a6c4ac7c1f25c372b63f2505d8e73"
+    },
+    {
+      "name": "kalman-before-after",
+      "title": "Before and after Kalman filtering",
+      "caption": "Figures 13\u201314. Original comparison image; illustration versus recorded-data provenance is not established.",
+      "source_asset_id": "f48495cb00276297",
+      "original": "originals/kalman-before-after.png",
+      "preview": "kalman-before-after.png",
+      "source_dimensions": [
+        1919,
+        744
+      ],
+      "original_sha256": "c7ef90773b5451f3e9f364ab5c9442fd2e4dde3e50d956b8139dd7a82f9acf5a"
+    },
+    {
+      "name": "confidence-smoothing",
+      "title": "Raw and smoothed confidence",
+      "caption": "Figure 12. Original source plot; this filter is not active in the reconstructed runtime.",
+      "source_asset_id": "b806801f0f345bac",
+      "original": "originals/confidence-smoothing.png",
+      "preview": "confidence-smoothing.png",
+      "source_dimensions": [
+        1901,
+        505
+      ],
+      "original_sha256": "26f2819b84a0a18874bf00ec9201f18a20e26fce05070bd6fd9c5528b79ed72e"
+    },
+    {
+      "name": "nis-distribution",
+      "title": "NIS distribution by intent",
+      "caption": "Figure 11. Original labels retained; the 5.99 threshold does not by itself validate intent classification.",
+      "source_asset_id": "640b24686d86d22a",
+      "original": "originals/nis-distribution.jpg",
+      "preview": "nis-distribution.png",
+      "source_dimensions": [
+        1599,
+        788
+      ],
+      "original_sha256": "9e6035a1ed18f6254e844900953ed7f362c00c4df822d4128e95ed28f5c8721b"
+    },
+    {
+      "name": "als-age-prevalence",
+      "title": "ALS prevalence by age",
+      "caption": "Figure 5. Historical contextual figure attributed in the image to the National ALS Registry, United States, 2012\u20132015; not a new medical analysis.",
+      "source_asset_id": "2c9c7c4be499fae4",
+      "original": "originals/als-age-prevalence.png",
+      "preview": "als-age-prevalence.png",
+      "source_dimensions": [
+        1599,
+        1044
+      ],
+      "original_sha256": "b22c8fc985c9592f448b05ae0871cd4ad99410883e5f9f0ada6abaf917829e29"
+    }
+  ]
+}

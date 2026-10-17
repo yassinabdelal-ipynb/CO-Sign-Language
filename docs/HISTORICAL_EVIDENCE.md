@@ -31,6 +31,10 @@ The source measurements, matching participant protocols and publication citation
 
 ## Supplied figures
 
+[Open the historical graph gallery](HISTORICAL_GRAPHS.md). Eleven individual uploaded graph assets were subsequently recovered from the shared Canva design. Each original is retained with a hash; Matplotlib generates readable white-background previews without recreating data.
+
+The board's historical results table reports accuracy 98.8%, loss 0.0398, precision 98.81%, recall 98.76%, F1 score 98.78%, and processing time 0.2105 (unit unspecified). These are poster-reported values, not results newly measured by this repository. The board also describes 300×150 eye crops, which differs from the author-described 350×150 stage and supplied 100×50 script.
+
 Four screenshots were supplied by the author, who confirmed that the visible people are the project team and approved publication. They are preserved without editing; captions and claims remain those of the original poster. Embedded charts cannot establish participant-level validation without underlying data.
 
 ![Original architecture and preprocessing excerpt](figures/architecture-poster.png)
@@ -41,7 +45,7 @@ The [intention and smoothing excerpts](INTENTION_METHOD.md) document the reporte
 
 ## Poster board
 
-[Author's Canva board link](https://canva.link/p8hqicedmjv0bf8). The full board could not be retrieved through the available web tool. The four supplied excerpts are included; a full-resolution board PDF is not fabricated from them. A later authorized PDF export can be added under `docs/poster/` after checking it for private participant information.
+[Author's Canva board link](https://canva.link/p8hqicedmjv0bf8). The board now opens through the background browser and its individual uploaded graph images have been recovered. A full-board PDF export prompts for Canva login and was not obtained. The original excerpts and [individual graph gallery](HISTORICAL_GRAPHS.md) are included; no complete board PDF has been fabricated.
 
 ## Reproducible numerical figures
 

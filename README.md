@@ -92,7 +92,7 @@ Outputs go into a new UUID session under `data/collected`: PNG eye crops, per-fr
 
 The notebook's model input is **224×224 grayscale, nearest-neighbor resize, float32, rescaled by 1/255**, NCHW in PyTorch. Live inference uses that same deterministic pixel conversion. Augmentation belongs in collection/training, never ordinary inference.
 
-There is an unresolved historical crop discrepancy: the supplied original preprocessing script masks an entire frame and resizes it to **100×50**; the author described a **350×150 eye crop**; the notebook reads existing eye images and resizes them to **224×224**. The newly written collector and live locator share their geometry, but the geometry of the supplied checkpoint's training images is not established. The original script is preserved as a [source artifact](docs/evidence/original_preprocess.py.txt).
+There is an unresolved historical crop discrepancy: the supplied original preprocessing script masks an entire frame and resizes it to **100×50**; the author described a **350×150 eye crop**, while the Canva board text says **300×150**; the notebook reads existing eye images and resizes them to **224×224**. The newly written collector and live locator share their geometry, but the geometry of the supplied checkpoint's training images is not established. The original script is preserved as a [source artifact](docs/evidence/original_preprocess.py.txt).
 
 For new training, split participants/sessions **before augmentation** and keep every derivative with its parent. Prepare `data/train` and `data/validation`, each with the six folders `center`, `close`, `down`, `left`, `right`, `up`. The collection label `blink` must be explicitly reviewed before assigning it to the classifier's `close` folder: a single closed-eye image does not establish a blink event. Use a separate, untouched participant-level test set for any final accuracy claim.
 
@@ -117,6 +117,8 @@ The supplied implementation is a **fixed-token Vision Transformer**, with 1,024 
 
 The training artifacts were supplied from a directory named `run_20261003_200537_729963`. They are **not asserted to be the 2025 ISEF experiment**. Graphs above were rendered with Matplotlib directly from the provided history and confusion counts; curves or samples were not invented. [Numerical artifacts and source hashes](docs/evidence/).
 
+The [historical Canva graph gallery](docs/HISTORICAL_GRAPHS.md) includes the original training curves, ViT/CNN matrices, text-entry chart, radar chart, attention heatmap and Kalman/NIS plots. These are preserved separately from the later notebook artifacts shown above.
+
 The authors separately report **98% eye-direction accuracy**, **22 words/minute**, **32 participants including two people with ALS**, and **350,000+ self-collected eye images** for the original project. Participant records, full dataset and text-entry logs are not included, so this repository does not independently reproduce those historical claims. The poster's comparison chart shows 20 words/minute, while the author identifies 22 as the reported result; this discrepancy is retained in [the evidence notes](docs/HISTORICAL_EVIDENCE.md).
 
 ## Uses and limits
@@ -126,6 +128,7 @@ Students and assistive-technology researchers can examine the complete path from
 This release does not provide a validated medical communication aid or demonstrate equivalence with every part of the original system. It needs user-specific evaluation, an untouched test set, trained eye-state weights and recovered/validated intention logic before broader performance claims. Do not rely on this prototype as someone's only communication channel.
 
 - [Walkthrough and demo script](docs/WALKTHROUGH.md)
+- [All historical Canva graphs](docs/HISTORICAL_GRAPHS.md)
 - [Historical figures, comparisons and ISEF award](docs/HISTORICAL_EVIDENCE.md)
 - [Kalman/NIS method and missing implementation](docs/INTENTION_METHOD.md)
 - [Assets, licenses and installation details](docs/ASSETS.md)
