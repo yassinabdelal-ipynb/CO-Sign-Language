@@ -66,7 +66,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\setup.ps1 -Python 
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\run.ps1 -Checkpoint 'weights\comeback_best.pt' -Predictor 'weights\shape_predictor_68_face_landmarks.dat' -Device cuda -Theme dark
 
 # Alternative: manually specify the eye rectangle in camera pixels. Geometry is approximate.
-powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\run.ps1 -Checkpoint 'weights\comeback_best.pt' -Roi 220,180,140,60 -Device cuda -Theme light
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\run.ps1 -Checkpoint 'weights\comeback_best.pt' -Roi '220,180,140,60' -Device cuda -Theme light
 ```
 
 The window shows the camera, predicted class, confidence, pending directions and decoded text. Hold center for at least 150 ms, then a direction for at least 350 ms; return to center between every direction. Low-confidence/missing frames interrupt a dwell. Camera stalls cannot count as a held gaze. Incomplete commands expire after five seconds. `Space` inserts a space; `Backspace` deletes; `C` clears; `Q`/`Esc` exits. Sessions are bounded to five minutes by default (`--seconds` changes this).
